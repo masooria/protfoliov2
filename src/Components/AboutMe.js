@@ -1,25 +1,5 @@
 import React from "react";
 
-export const about_me_after = `
-software_developer {
-  name: { first: 'Surya', last: 'Iriventi' },
-  experience: { years: 3, months: 11, days: 8 },
-  skills: {
-    programming_languages: [ 'JavaScript', 'Python', 'Bash' ],
-    natural_languages: [ 'English', 'Telugu', 'Hindi' ],
-    interests: [
-      'Natural Language Processing',
-      'Machine Learning',
-      'Cloud Infrastructure',
-      'Computer Games',
-      'Film Making'
-    ]
-  }
-}`;
-
-// export default about_me;
-
-// console.log(Me);
 // function calculate_experience() {
 //   start_date = new Date("2016-04-26T04:40:23.828Z");
 //   var today = new Date();
@@ -79,6 +59,45 @@ export function about_me_before() {
       <span className="comments">
         // Run this code by clicking button below
       </span>
+    </pre>
+  );
+}
+
+export function about_me_after() {
+  return (
+    <pre id="code_space">
+      <span className="var">software_developer</span> {"{"}
+      {"\n"}
+      {"  "}
+      <span className="names">name</span>: {"{"} first:{" "}
+      <span className="args">'Surya'</span>, last:{" "}
+      <span className="args">'Iriventi'</span> {"}"},{"\n"}
+      {"  "}
+      <span className="names">experience</span>: {"{"} years:
+      <span className="args"> 3</span>, months: <span className="args">11</span>
+      , days: <span className="args">8</span>
+      {"}"},{"\n"}
+      {"  "}
+      <span className="names">skills</span>: {"{"}
+      {"\n"}
+      {"    "}programming_languages: [{" "}
+      <span className="args">'JavaScript', 'Python', 'Bash'</span> ],
+      {"\n"}
+      {"    "}natural_languages: [{" "}
+      <span className="args">'English', 'Telugu', 'Hindi'</span> ],{"\n"}
+      {"    "}interests: [{"\n"}
+      <span className="args">
+        {"      "}'Natural Language Processing',{"\n"}
+        {"      "}'Machine Learning',{"\n"}
+        {"      "}'Cloud Infrastructure',{"\n"}
+        {"      "}'Computer Games',{"\n"}
+        {"      "}'Film Making'{"\n"}
+      </span>
+      {"    "}]{"\n"}
+      {"  "}
+      {"}"}
+      {"\n"}
+      {"}"}
     </pre>
   );
 }

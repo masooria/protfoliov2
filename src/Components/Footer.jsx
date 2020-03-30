@@ -20,7 +20,7 @@ const Footer = () => {
           <span role="img" aria-label="logo">
             . 🤘
           </span>
-          I am that; because this is sometimes 'undefined'
+          You be 'that', if 'this' is 'undefined'
           <span role="img" aria-label="logo">
             🤘
           </span>
