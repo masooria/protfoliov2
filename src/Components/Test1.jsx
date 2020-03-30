@@ -31,16 +31,16 @@ const Test1 = () => {
         <MainItem>
           <Container spacing={4}>
             <Item>
-              <Paper className={classes.paper}>xs=12 sm=6 md=3s</Paper>
+              <Paper className={classes.paper}>component</Paper>
             </Item>
             <Item>
-              <Paper className={classes.paper}>xs=12 sm=6 md=3</Paper>
+              <Paper className={classes.paper}>under development</Paper>
             </Item>
             <Item>
-              <Paper className={classes.paper}>xs=12 sm=6 md=3</Paper>
+              <Paper className={classes.paper}>check back </Paper>
             </Item>
             <Item>
-              <Paper className={classes.paper}>xs=12 sm=6 md=3</Paper>
+              <Paper className={classes.paper}>in some time</Paper>
             </Item>
           </Container>
         </MainItem>

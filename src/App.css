@@ -2,26 +2,30 @@ html,
 body {
   min-height: 100%;
   background-image: url("/greenBackground_surya.jpg");
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 100%;
-  /* flex-grow: 1; */
+  background-attachment: fixed;
+  flex-grow: 1;
 }
 
 .headerBG {
-  background: #000000; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
+  background: #000000;
+  /* background: -webkit-linear-gradient(
     to top,
     #000000,
     #434343
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  );
   background: linear-gradient(
     to top,
     #000000,
     #434343
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ); */
+
+  background: linear-gradient(to bottom, black, black, rgba(255, 0, 0, 0));
+  color: white;
 }
 
 @font-face {
@@ -35,33 +39,27 @@ body {
 
 .banner-text {
   background-color: black;
-  opacity: 0.8;
-  width: 100%;
+  /* opacity: 0.8; */
+  width: 90%;
   margin: auto;
   justify-content: center;
   text-align: center;
   border-radius: 10px;
 }
 
-h2 {
-  font-size: 50px;
+h2,
+h4 {
+  /* font-size: 50px; */
   font-weight: bold;
   color: aliceblue;
   justify-content: center;
 }
 
-h1 {
-  font-size: 66px;
-  font-weight: bold;
-  color: aliceblue;
-  justify-content: center;
-}
-
-.banner-text hr {
+/* .banner-text hr {
   border-top: 5px dotted white;
   width: 50%;
   margin: auto;
-}
+} */
 
 .banner-text p {
   color: aliceblue;
@@ -78,16 +76,68 @@ h1 {
   height: 5%;
   justify-content: center;
   line-height: 1em;
-  background: #000000; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #434343,
-    #000000
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #434343,
-    #000000
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #000000;
+  background: linear-gradient(to bottom, rgba(255, 0, 0, 0), black);
   color: white;
+}
+
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.MuiButton-textPrimary {
+  text-transform: none;
+}
+
+.this {
+  color: magenta;
+}
+.string {
+  color: rgba(253, 149, 90, 0.8);
+}
+
+.var {
+  color: tomato;
+}
+
+.names {
+  color: deepskyblue;
+}
+
+.name2 {
+  color: bisque;
+}
+
+.args {
+  color: gold;
+}
+
+.comments {
+  color: mistyrose;
+  font-size: 18px;
+}
+
+#code_space {
+  height: 400px;
+  color: white;
+  background-color: rgb(85, 84, 84);
+  overflow: auto;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 1em;
+  text-align: left;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#code_space_load {
+  height: 400px;
+  color: white;
+  background-color: rgb(85, 84, 84);
+  overflow: auto;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 1em;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
 }

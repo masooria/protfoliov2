@@ -23,11 +23,16 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1
   },
   flex: {
-    flex: 1
+    flex: 1,
+    color: "white"
+  },
+  tcolor: {
+    color: "white"
   },
   menuButton: {
     marginLeft: -12,
-    marginRight: 20
+    marginRight: 20,
+    color: "white"
   },
   toolbarMargin: theme.mixins.toolbar
 }));
@@ -71,6 +76,7 @@ const Drawer_grp = ({ open, setOpen }) => {
 };
 
 const RightButtons = () => {
+  const classes = useStyles();
   return (
     <>
       <ButtonGroup
@@ -78,15 +84,15 @@ const RightButtons = () => {
         display={{ xs: "none", sm: "block" }}
         size="large"
         variant="text"
-        aria-label="large outlined primary button group"
+        aria-label="app bar button group"
       >
-        <Button component={Link} to="/t" color="inherit">
+        <Button className={classes.tcolor} component={Link} to="/t">
           Resume
         </Button>
-        <Button component={Link} to="/" color="inherit">
+        <Button className={classes.tcolor} tatcomponent={Link} to="/">
           Grudge List
         </Button>
-        <Button color="inherit">Contact</Button>
+        <Button>Contact</Button>
       </ButtonGroup>
     </>
   );
@@ -94,16 +100,14 @@ const RightButtons = () => {
 
 const Header = () => {
   const classes = useStyles();
-  const [clickPosition, setclickPosition] = useState(null);
   const [open, setOpen] = useState(false);
-  const closeMenu = () => setclickPosition(null);
   return (
     <>
-      <AppBar className="headerBG">
+      <AppBar color="transparent" className="headerBG">
         <Toolbar>
           <IconButton
             className={classes.menuButton}
-            color="inherit"
+            color="secondary"
             aria-label="Menu"
             onClick={() => setOpen(!open)}
           >
@@ -111,15 +115,10 @@ const Header = () => {
           </IconButton>
           <Drawer_grp open={open} setOpen={setOpen} />
 
-          <Typography
-            component={Link}
-            to="/"
-            color="inherit"
-            className={classes.flex}
-          >
+          <Typography component={Link} to="/" className={classes.flex}>
             Masooria
           </Typography>
-          <RightButtons />
+          <RightButtons className={classes.tcolor} />
         </Toolbar>
       </AppBar>
       <div className={classes.toolbarMargin} />

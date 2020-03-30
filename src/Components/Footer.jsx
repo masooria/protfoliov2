@@ -1,20 +1,26 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
+import { makeStyles } from "@material-ui/core/styles";
 
 const Container = props => <Grid container {...props} />;
 const Item = props => <Grid item xs={12} sm={6} md={3} {...props} />;
 const MainItem = props => <Grid item {...props} />;
+const useStyles = makeStyles(theme => ({
+  toolbarMargin: theme.mixins.toolbar
+}));
 
 const Footer = () => {
+  const classes = useStyles();
   return (
     <>
+      <div className={classes.toolbarMargin} />
       <div className="footer">
-        <p className="traditionalFont">
-          || tat tvam asi ||
+        <p>
+          <span className="traditionalFont">|| tat tvam asi ||</span>
           <span role="img" aria-label="logo">
             . 🤘
           </span>
-          I am that, Because I hate 'this'
+          I am that; because this is sometimes 'undefined'
           <span role="img" aria-label="logo">
             🤘
           </span>
