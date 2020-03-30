@@ -46,7 +46,7 @@ const Drawer_grp = ({ open, setOpen }) => {
           <ListItem
             button
             component={Link}
-            to="/resume"
+            to="/t"
             onClick={() => setOpen(false)}
           >
             <ListItemText>Resume</ListItemText>
@@ -89,10 +89,12 @@ const RightButtons = () => {
         <Button className={classes.tcolor} component={Link} to="/t">
           Resume
         </Button>
-        <Button className={classes.tcolor} tatcomponent={Link} to="/">
+        <Button className={classes.tcolor} tatcomponent={Link} to="/t">
           Grudge List
         </Button>
-        <Button>Contact</Button>
+        <Button className={classes.tcolor} tatcomponent={Link} to="/t">
+          Contact
+        </Button>
       </ButtonGroup>
     </>
   );
